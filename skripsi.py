@@ -655,7 +655,7 @@ if uploaded_file is not None:
                             4.2 Visualisasi Trajektori Pertumbuhan E-commerce
                         </h2>
                     </div>
-                """, unsafe_allow_html=True)
+                    """, unsafe_allow_html=True)
 
                 # Definisikan variabel sebelum digunakan
                 variables = ['Harga', 'Kualitas', 'Loyalitas']
