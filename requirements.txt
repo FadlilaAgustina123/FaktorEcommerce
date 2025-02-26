@@ -1,17 +1,17 @@
-streamlit
-pandas
-numpy
-matplotlib
-plotly
-scipy
-seaborn
-scikit-learn
-warnings
-
 # streamlit
 # pandas
 # numpy
 # matplotlib
 # plotly
+# scipy
 # seaborn
 # scikit-learn
+# # warnings
+
+streamlit
+pandas
+numpy
+matplotlib
+plotly
+seaborn
+scikit-learn
