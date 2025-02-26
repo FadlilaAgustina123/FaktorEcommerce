@@ -619,59 +619,30 @@ if uploaded_file is not None:
 
                 # 4.2 Visualisasi Trajektori Pertumbuhan yang Lebih Menarik
                 st.markdown("""
-                    <div style='
-                        background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
-                        color: white;
-                        padding: 2rem; 
-                        border-radius: 15px; 
-                        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-                        margin: 2rem 0;
-                        display: flex;
-                        align-items: center;
-                    '>
-                        <div style='
-                            background: rgba(255,255,255,0.2); 
-                            border-radius: 50%; 
-                            width: 70px; 
-                            height: 70px; 
-                            display: flex; 
-                            align-items: center; 
-                            justify-content: center; 
-                            margin-right: 20px;
-                        '>
-                            <span style='font-size: 2.5rem;'>📈</span>
+                    <div style="background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%); color: white; padding: 2rem; border-radius: 15px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); margin: 2rem 0; display: flex; align-items: center;">
+                        <div style="background: rgba(255,255,255,0.2); border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; margin-right: 20px;">
+                            <span style="font-size: 2.5rem;">📈</span>
                         </div>
-                        <h2 style='
-                            margin: 0; 
-                            font-size: 2rem; 
-                            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-                        '>
+                        <h2 style="margin: 0; font-size: 2rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">
                             4.2 Visualisasi Trajektori Pertumbuhan E-commerce
                         </h2>
                     </div>
-                    """)
+                    """, unsafe_allow_html=True)
 
                 # Definisikan variabel sebelum digunakan
                 variables = ['Harga', 'Kualitas', 'Loyalitas']
 
                 try:
-                    # Impor semopy dengan penanganan kesalahan yang lebih baik
-                    try:
-                        from semopy import Model
-                    except ImportError:
-                        st.error("""
-                        <div style='
-                            background-color: #ffebee; 
-                            border-left: 5px solid #f44336; 
-                            padding: 15px; 
-                            border-radius: 5px;
-                        '>
-                            🚨 Paket 'semopy' tidak terinstall. 
-                            Silakan install dengan menjalankan:
-                            <code>pip install semopy</code>
-                        </div>
-                        """)
-                        st.stop()
+                    from semopy import Model
+                except ImportError:
+                    st.error("""
+                    <div style="background-color: #ffebee; border-left: 5px solid #f44336; padding: 15px; border-radius: 5px;">
+                        🚨 Paket 'semopy' tidak terinstall. 
+                        Silakan install dengan menjalankan:
+                        <code>pip install semopy</code>
+                    </div>
+                    """, unsafe_allow_html=True)
+                    st.stop()
 
                     # Fit LGCM model and get estimates
                     model = Model(LGCM_MODEL)
