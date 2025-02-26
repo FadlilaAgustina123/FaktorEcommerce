@@ -1,9 +1,17 @@
 streamlit
 pandas
 numpy
+matplotlib
 plotly
 scipy
 seaborn
-matplotlib.pyplot
 scikit-learn
 warnings
+
+# streamlit
+# pandas
+# numpy
+# matplotlib
+# plotly
+# seaborn
+# scikit-learn
