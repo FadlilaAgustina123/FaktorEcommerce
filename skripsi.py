@@ -649,7 +649,7 @@ if uploaded_file is not None:
                             4.2 Visualisasi Trajektori Pertumbuhan E-commerce
                         </h2>
                     </div>
-                """, unsafe_allow_html=True)
+                    """)
 
                 # Definisikan variabel sebelum digunakan
                 variables = ['Harga', 'Kualitas', 'Loyalitas']
@@ -670,7 +670,7 @@ if uploaded_file is not None:
                             Silakan install dengan menjalankan:
                             <code>pip install semopy</code>
                         </div>
-                        """, unsafe_allow_html=True)
+                        """)
                         st.stop()
 
                     # Fit LGCM model and get estimates
@@ -812,7 +812,7 @@ if uploaded_file is not None:
                         - Estimasi valid
                         - Paket semopy terinstall
                     </div>
-                    """, unsafe_allow_html=True)
+                    """)
 
                 # 4.3 Interpretasi Hasil dengan Desain Modern
                 st.markdown("""
