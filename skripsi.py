@@ -669,15 +669,16 @@ if uploaded_file is not None:
                     trajectories = [traj_harga, traj_kualitas, traj_loyalitas]
                     
                     # Membuat plot menggunakan Plotly dengan desain yang lebih menarik
+                    # Buat figure
                     fig = go.Figure()
-                    
+
                     # Palet warna yang lebih estetis
                     color_palette = {
                         'Harga': '#2196F3',     # Vibrant Blue
                         'Kualitas': '#4CAF50',  # Vivid Green
                         'Loyalitas': '#FF5722'  # Deep Orange
                     }
-                    
+
                     # Plot untuk variabel Harga, Kualitas, dan Loyalitas
                     variables_data = [
                         ('Harga', traj_harga, color_palette['Harga']),
@@ -702,7 +703,7 @@ if uploaded_file is not None:
                             textposition='top center',
                             hovertemplate=f'<b>{var}</b><br>Waktu: %{{x}}<br>Nilai: %{{y:.2f}}<extra></extra>'
                         ))
-                    
+                        
                     # Update layout dengan desain modern
                     fig.update_layout(
                         title={
